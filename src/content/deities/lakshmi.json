@@ -1,0 +1,28 @@
+{
+  "slug": "lakshmi",
+  "order": 7,
+  "enabled": true,
+  "name": "Goddess Lakshmi",
+  "nameDevanagari": "लक्ष्मी",
+  "epithet": "Mahalakshmi · Grace and Abundance",
+  "shortDescription": "Goddess of grace, prosperity and auspiciousness, seated upon the lotus.",
+  "description": "Lakshmi rises from the churning of the ocean seated upon a lotus — beauty untouched by the waters around it. She is grace, auspiciousness and abundance in every form: health, harmony, generosity and inner contentment. Offer gratitude here for all that sustains your life.",
+  "mantra": {
+    "devanagari": "ॐ श्रीं महालक्ष्म्यै नमः",
+    "transliteration": "Om Śrīṃ Mahālakṣmyai Namaḥ",
+    "meaning": "Salutations to Mahalakshmi."
+  },
+  "art": {
+    "emblem": "lakshmi",
+    "image": null,
+    "imageAlt": "Purna kalasha upon a lotus with golden coins",
+    "credit": "Original placeholder emblem (SVG) — in-house. Replace with commissioned artwork when available."
+  },
+  "theme": {
+    "skyTop": "#22081a",
+    "skyBottom": "#742844",
+    "glow": "#ffc8da",
+    "accent": "#f3c86b",
+    "motif": "lotus-pond"
+  }
+}

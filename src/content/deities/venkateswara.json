@@ -1,0 +1,28 @@
+{
+  "slug": "venkateswara",
+  "order": 10,
+  "enabled": true,
+  "name": "Lord Venkateswara",
+  "nameDevanagari": "वेङ्कटेश्वर",
+  "epithet": "Srinivasa · Lord of the Seven Hills",
+  "shortDescription": "The compassionate Lord of the Seven Hills, a form of Vishnu.",
+  "description": "Venkateswara — Srinivasa, Balaji, Govinda — is revered as the form of Vishnu who dwells upon the seven hills for the welfare of devotees in this age. He is remembered with the shankha and chakra and the sacred Urdhva Pundra on his brow. Offer your heart here in simple devotion.",
+  "mantra": {
+    "devanagari": "ॐ नमो वेङ्कटेशाय",
+    "transliteration": "Om Namo Veṅkaṭeśāya",
+    "meaning": "Salutations to Lord Venkatesha."
+  },
+  "art": {
+    "emblem": "venkateswara",
+    "image": null,
+    "imageAlt": "Urdhva Pundra between shankha and chakra above the seven hills",
+    "credit": "Original placeholder emblem (SVG) — in-house. Replace with commissioned artwork when available."
+  },
+  "theme": {
+    "skyTop": "#0b0a24",
+    "skyBottom": "#3a2a5a",
+    "glow": "#ffd98a",
+    "accent": "#f3d98b",
+    "motif": "hills"
+  }
+}

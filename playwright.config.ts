@@ -1,0 +1,27 @@
+import { defineConfig, devices } from "@playwright/test";
+
+const PORT = Number(process.env.E2E_PORT || 3200);
+
+export default defineConfig({
+  testDir: "tests/e2e",
+  timeout: 90_000,
+  expect: { timeout: 10_000 },
+  fullyParallel: true,
+  // Real Chrome + canvas-heavy pages: too many parallel browsers starve rAF and cause false timeouts.
+  workers: process.env.CI ? 2 : 3,
+  retries: 0,
+  reporter: [["list"]],
+  use: { baseURL: `http://localhost:${PORT}`, trace: "retain-on-failure" },
+  webServer: {
+    // Tests run against a production build: `npm run build` first.
+    command: `npx next start -p ${PORT}`,
+    port: PORT,
+    reuseExistingServer: true,
+    timeout: 120_000,
+  },
+  projects: [
+    { name: "desktop-chrome", use: { ...devices["Desktop Chrome"], channel: "chrome" } },
+    { name: "android-chrome", use: { ...devices["Pixel 7"], channel: "chrome" } },
+    { name: "iphone-webkit", use: { ...devices["iPhone 14"] } },
+  ],
+});

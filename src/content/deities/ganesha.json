@@ -1,0 +1,28 @@
+{
+  "slug": "ganesha",
+  "order": 2,
+  "enabled": true,
+  "name": "Lord Ganesha",
+  "nameDevanagari": "गणेश",
+  "epithet": "Vighnaharta · Remover of Obstacles",
+  "shortDescription": "Lord of beginnings, invoked first before every auspicious undertaking.",
+  "description": "Ganesha, beloved son of Shiva and Parvati, is honoured first at every beginning. With the ankusha he guides, with the pasha he gently draws devotees close, and with the modak he reminds us of the sweetness of wisdom. Bring your new beginnings here, and begin with a quiet, grateful heart.",
+  "mantra": {
+    "devanagari": "ॐ गं गणपतये नमः",
+    "transliteration": "Om Gaṃ Gaṇapataye Namaḥ",
+    "meaning": "Salutations to Ganapati, lord of beginnings."
+  },
+  "art": {
+    "emblem": "ganesha",
+    "image": null,
+    "imageAlt": "The sacred syllable Om with ankusha, pasha and modaks",
+    "credit": "Original placeholder emblem (SVG) — in-house. Replace with commissioned artwork when available."
+  },
+  "theme": {
+    "skyTop": "#1d0805",
+    "skyBottom": "#7c2a10",
+    "glow": "#ffb85a",
+    "accent": "#ff8a33",
+    "motif": "temple-hall"
+  }
+}

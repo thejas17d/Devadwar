@@ -1,0 +1,28 @@
+{
+  "slug": "hanuman",
+  "order": 5,
+  "enabled": true,
+  "name": "Lord Hanuman",
+  "nameDevanagari": "हनुमान",
+  "epithet": "Sankat Mochan · Strength in Devotion",
+  "shortDescription": "The embodiment of devotion, courage and selfless service.",
+  "description": "Hanuman, devoted servant of Sri Rama, is remembered for boundless courage held in perfect humility. His gada stands for strength placed in service, and the name of Rama is ever on his lips. Sit with him and draw on steadiness, courage and devotion.",
+  "mantra": {
+    "devanagari": "ॐ हं हनुमते नमः",
+    "transliteration": "Om Haṃ Hanumate Namaḥ",
+    "meaning": "Salutations to Hanuman."
+  },
+  "art": {
+    "emblem": "hanuman",
+    "image": null,
+    "imageAlt": "Gada with a saffron banner bearing the name of Rama, before the rising sun",
+    "credit": "Original placeholder emblem (SVG) — in-house. Replace with commissioned artwork when available."
+  },
+  "theme": {
+    "skyTop": "#1f0a03",
+    "skyBottom": "#a24614",
+    "glow": "#ffad4d",
+    "accent": "#ff7a1a",
+    "motif": "sunrise"
+  }
+}

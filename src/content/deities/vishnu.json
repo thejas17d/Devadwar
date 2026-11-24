@@ -1,0 +1,28 @@
+{
+  "slug": "vishnu",
+  "order": 3,
+  "enabled": true,
+  "name": "Lord Vishnu",
+  "nameDevanagari": "विष्णु",
+  "epithet": "Narayana · The Preserver",
+  "shortDescription": "The preserver of the worlds, resting on the cosmic ocean.",
+  "description": "Vishnu, as Narayana, rests upon the cosmic ocean and sustains the order of all worlds. The shankha calls to dharma, the Sudarshana chakra turns with the wheel of time, the gada stands for strength and the lotus for purity unfolding. Rest here a while in the steadiness of the preserver.",
+  "mantra": {
+    "devanagari": "ॐ नमो भगवते वासुदेवाय",
+    "transliteration": "Om Namo Bhagavate Vāsudevāya",
+    "meaning": "Salutations to Lord Vasudeva, who dwells within all beings."
+  },
+  "art": {
+    "emblem": "vishnu",
+    "image": null,
+    "imageAlt": "Shankha, Sudarshana chakra, gada and lotus",
+    "credit": "Original placeholder emblem (SVG) — in-house. Replace with commissioned artwork when available."
+  },
+  "theme": {
+    "skyTop": "#030d22",
+    "skyBottom": "#0e3a60",
+    "glow": "#86d6ff",
+    "accent": "#f3d98b",
+    "motif": "ocean"
+  }
+}

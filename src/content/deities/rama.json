@@ -1,0 +1,28 @@
+{
+  "slug": "rama",
+  "order": 9,
+  "enabled": true,
+  "name": "Lord Rama",
+  "nameDevanagari": "राम",
+  "epithet": "Maryada Purushottam · The Ideal King",
+  "shortDescription": "The ideal of righteousness, bearer of the Kodanda bow.",
+  "description": "Sri Rama of the solar dynasty is remembered as the ideal of dharma — a son, king and friend who never wavered from truth. The Kodanda bow and the rising sun of his lineage stand for steadfast purpose. Rest here in the calm of righteousness.",
+  "mantra": {
+    "devanagari": "श्री राम जय राम जय जय राम",
+    "transliteration": "Śrī Rāma Jaya Rāma Jaya Jaya Rāma",
+    "meaning": "Glory to Sri Rama."
+  },
+  "art": {
+    "emblem": "rama",
+    "image": null,
+    "imageAlt": "The Kodanda bow and arrows before the sun of the solar dynasty",
+    "credit": "Original placeholder emblem (SVG) — in-house. Replace with commissioned artwork when available."
+  },
+  "theme": {
+    "skyTop": "#140a24",
+    "skyBottom": "#8a4a1c",
+    "glow": "#ffd27a",
+    "accent": "#f0a83a",
+    "motif": "river"
+  }
+}

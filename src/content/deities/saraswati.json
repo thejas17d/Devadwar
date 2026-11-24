@@ -1,0 +1,28 @@
+{
+  "slug": "saraswati",
+  "order": 8,
+  "enabled": true,
+  "name": "Goddess Saraswati",
+  "nameDevanagari": "सरस्वती",
+  "epithet": "Vagdevi · Goddess of Learning",
+  "shortDescription": "Goddess of knowledge, music and the arts, clothed in white.",
+  "description": "Saraswati, clothed in white and seated by the flowing river, is the source of speech, learning, music and the arts. The veena, the sacred book and the white lotus are her companions. Students, artists and seekers come to her for clarity of mind and purity of expression.",
+  "mantra": {
+    "devanagari": "ॐ ऐं सरस्वत्यै नमः",
+    "transliteration": "Om Aiṃ Sarasvatyai Namaḥ",
+    "meaning": "Salutations to Goddess Saraswati."
+  },
+  "art": {
+    "emblem": "saraswati",
+    "image": null,
+    "imageAlt": "Veena with a palm-leaf manuscript and white lotus",
+    "credit": "Original placeholder emblem (SVG) — in-house. Replace with commissioned artwork when available."
+  },
+  "theme": {
+    "skyTop": "#0d1630",
+    "skyBottom": "#3b4f78",
+    "glow": "#fff4dc",
+    "accent": "#e8eef8",
+    "motif": "lotus-pond"
+  }
+}

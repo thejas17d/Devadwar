@@ -1,0 +1,28 @@
+{
+  "slug": "krishna",
+  "order": 4,
+  "enabled": true,
+  "name": "Lord Krishna",
+  "nameDevanagari": "कृष्ण",
+  "epithet": "Govinda · The Divine Flute-Player",
+  "shortDescription": "The flute-player of Vrindavan, whose music draws every heart.",
+  "description": "Krishna's flute is said to have stilled the cattle, the river and the hearts of all who heard it in Vrindavan. Playful as a child, wise as the teacher of the Gita, he is remembered with the peacock feather and the bansuri. Listen, and let the music lead you inward.",
+  "mantra": {
+    "devanagari": "ॐ श्री कृष्णाय नमः",
+    "transliteration": "Om Śrī Kṛṣṇāya Namaḥ",
+    "meaning": "Salutations to Sri Krishna."
+  },
+  "art": {
+    "emblem": "krishna",
+    "image": null,
+    "imageAlt": "Bansuri flute with a peacock feather",
+    "credit": "Original placeholder emblem (SVG) — in-house. Replace with commissioned artwork when available."
+  },
+  "theme": {
+    "skyTop": "#081236",
+    "skyBottom": "#1b4c68",
+    "glow": "#7fe6d6",
+    "accent": "#35b0a8",
+    "motif": "vrindavan"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "slug": "shiva",
+  "order": 1,
+  "enabled": true,
+  "name": "Lord Shiva",
+  "nameDevanagari": "शिव",
+  "epithet": "Mahadeva · The Auspicious One",
+  "shortDescription": "The still centre of meditation, adorned with the crescent moon and the sacred Ganga.",
+  "description": "Shiva is revered as Mahadeva — the great god of stillness, transformation and grace. Devotees remember him as the ascetic of Kailash, the crescent moon in his matted locks, the sacred Ganga flowing from his hair and the damaru marking the rhythm of creation. A moment before Shiva is a moment of quiet: letting the mind settle like snow on the mountain.",
+  "mantra": {
+    "devanagari": "ॐ नमः शिवाय",
+    "transliteration": "Om Namaḥ Śivāya",
+    "meaning": "Salutations to Shiva, the auspicious one."
+  },
+  "art": {
+    "emblem": "shiva",
+    "image": null,
+    "imageAlt": "The Shivalinga with trishula, damaru, crescent moon and bilva leaves",
+    "credit": "Original placeholder emblem (SVG) — in-house. Replace with commissioned artwork when available."
+  },
+  "theme": {
+    "skyTop": "#070d22",
+    "skyBottom": "#223761",
+    "glow": "#a9cdfa",
+    "accent": "#c9d8f0",
+    "motif": "kailash"
+  }
+}
