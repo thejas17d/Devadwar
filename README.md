@@ -17,6 +17,7 @@ This is an **independent digital devotional product**. It does not represent any
 | ₹10 Darshan · ₹20 Darshan + Aarti · ₹30 Interactive Aarti | ✅ Built; prices in `src/config/packages.ts` |
 | Private Sankalp + symbolic Prayer Box | ✅ Built; text never leaves the browser tab |
 | Checkout | ✅ **DEMO ONLY** — no money moves; live gateway deliberately not enabled |
+| Live demo | ✅ https://thejas17d.github.io/Devadwar/ (GitHub Pages, static build) |
 | Legal pages | ⚠️ Drafts — **must be reviewed by an Indian lawyer before launch** |
 | Deity artwork | ⚠️ Original *symbolic emblems* as placeholders — commission final art (see `ASSET_LICENCES.md`) |
 | Recorded mantras / human-performed music | ⚠️ Not included — slots + rights workflow ready |
@@ -85,7 +86,30 @@ This is a standard Next.js server app (it has API routes for orders/receipts), s
 
 Set environment variables from `.env.example` on the host. Never commit `.env.local`.
 
-Nothing has been pushed or deployed. Live payments are disabled by design (`PAYMENT_MODE=demo`) until you approve gateway onboarding — see `ARCHITECTURE.md › Payments`.
+Live payments are disabled by design (`PAYMENT_MODE=demo`) until you approve gateway onboarding — see `ARCHITECTURE.md › Payments`.
+
+### GitHub Pages (live demo)
+
+**Live:** https://thejas17d.github.io/Devadwar/ — served from the `gh-pages` branch.
+
+GitHub Pages is static hosting, so the Pages build (`DEPLOY_TARGET=pages`) is a static export: no API routes, no custom security headers, and the **demo payment runs in the browser** (still demo-only, with amounts always taken from config). Everything else — gateway, gallery, music, Sankalp, all three experiences, legal pages — is identical. Real payments must use the server build.
+
+```bash
+npm run build:pages    # static export → ./out (base path /Devadwar)
+npm run serve:pages    # preview like GitHub Pages: http://localhost:4173/Devadwar/
+npm run deploy:pages   # build + publish ./out to the gh-pages branch (needs push access)
+```
+
+Test the static build, or the live site, with the same end-to-end suite:
+
+```bash
+# local static preview
+E2E_STATIC=1 E2E_PORT=4173 E2E_BASE_PATH=/Devadwar npx playwright test
+# deployed site
+E2E_STATIC=1 E2E_BASE_URL=https://thejas17d.github.io E2E_BASE_PATH=/Devadwar npx playwright test
+```
+
+(On Git Bash for Windows, prefix with `MSYS_NO_PATHCONV=1` so `/Devadwar` isn't rewritten as a Windows path.) For a custom domain at the root, build with `BASE_PATH=/ SITE_URL=https://your-domain npm run build:pages`.
 
 ---
 

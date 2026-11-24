@@ -3,6 +3,8 @@ import { defineConfig, devices } from "@playwright/test";
 const PORT = Number(process.env.E2E_PORT || 3200);
 // E2E_STATIC=1 tests the GitHub Pages build (./out) through scripts/serve-pages.mjs.
 const STATIC = process.env.E2E_STATIC === "1";
+// E2E_BASE_URL=https://… tests an already-deployed site (no local server started).
+const REMOTE = process.env.E2E_BASE_URL;
 
 export default defineConfig({
   testDir: "tests/e2e",
@@ -13,8 +15,8 @@ export default defineConfig({
   workers: process.env.CI ? 2 : 3,
   retries: 0,
   reporter: [["list"]],
-  use: { baseURL: `http://localhost:${PORT}`, trace: "retain-on-failure" },
-  webServer: {
+  use: { baseURL: REMOTE || `http://localhost:${PORT}`, trace: "retain-on-failure" },
+  webServer: REMOTE ? undefined : {
     // Tests run against a production build: `npm run build` first.
     command: STATIC ? `node scripts/serve-pages.mjs` : `npx next start -p ${PORT}`,
     port: PORT,
