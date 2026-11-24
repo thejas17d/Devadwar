@@ -1,0 +1,31 @@
+2:"$Sreact.fragment"
+3:"/Devadwar/_next/static/chunks/2daah0oetb1x-.js"
+4:I[39756,["$3"],"default"]
+5:I[37457,["$3"],"default"]
+c:"/Devadwar/_next/static/chunks/0d7wq2cixie4l.js"
+d:"/Devadwar/_next/static/chunks/0gi6e32g09z8z.js"
+e:"/Devadwar/_next/static/chunks/1r9uxvfvvtpyn.js"
+f:I[20082,["$3","$c","$d","$e"],"DeityClient"]
+10:I[97367,["$3"],"OutletBoundary"]
+11:"$Sreact.suspense"
+14:"ViewportBoundary"
+15:I[97367,["$3"],"$14"]
+16:"MetadataBoundary"
+17:I[97367,["$3"],"$16"]
+18:I[27201,["$3"],"IconMark"]
+7:X
+7:C
+8:X
+b:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","$Lf",null,{"deity":{"slug":"lakshmi","order":7,"enabled":true,"name":"Goddess Lakshmi","nameDevanagari":"लक्ष्मी","epithet":"Mahalakshmi · Grace and Abundance","shortDescription":"Goddess of grace, prosperity and auspiciousness, seated upon the lotus.","description":"Lakshmi rises from the churning of the ocean seated upon a lotus — beauty untouched by the waters around it. She is grace, auspiciousness and abundance in every form: health, harmony, generosity and inner contentment. Offer gratitude here for all that sustains your life.","mantra":{"devanagari":"ॐ श्रीं महालक्ष्म्यै नमः","transliteration":"Om Śrīṃ Mahālakṣmyai Namaḥ","meaning":"Salutations to Mahalakshmi."},"art":{"emblem":"lakshmi","image":null,"imageAlt":"Purna kalasha upon a lotus with golden coins","credit":"Original placeholder emblem (SVG) — in-house. Replace with commissioned artwork when available."},"theme":{"skyTop":"#22081a","skyBottom":"#742844","glow":"#ffc8da","accent":"#f3c86b","motif":"lotus-pond"}},"packages":[{"id":"digitalDarshan","order":1,"available":true,"name":"Digital Darshan","nameDevanagari":"दर्शन","pricePaise":1000,"currency":"INR","tagline":"A quiet moment before the deity","description":"Enter a dedicated devotional environment and spend a peaceful moment in the presence of your chosen deity.","features":["Full-screen digital viewing of the deity","Dedicated devotional environment","Deity-specific devotional music","Optional private Sankalp note","Peaceful ambient effects — stay as long as you wish"],"capabilities":{"darshan":true,"sankalp":true,"watchAarti":false,"interactiveAarti":false}},{"id":"digitalAarti","order":2,"available":true,"name":"Digital Darshan + Aarti","nameDevanagari":"दर्शन · आरती","pricePaise":2000,"currency":"INR","tagline":"Watch a digital Aarti unfold","description":"Everything in Digital Darshan, plus a presented digital Aarti sequence with a brass lamp, temple bells and Aarti music.","features":["Everything in Digital Darshan","Presented digital Aarti sequence","Brass Aarti lamp with animated flame","Temple bell sound effects and Aarti music","Aarti styled for your chosen deity"],"capabilities":{"darshan":true,"sankalp":true,"watchAarti":true,"interactiveAarti":false}},{"id":"interactiveAarti","order":3,"available":true,"name":"Interactive Digital Aarti","nameDevanagari":"स्वयं आरती","pricePaise":3000,"currency":"INR","tagline":"Hold the lamp yourself","description":"Everything in Darshan + Aarti, plus a virtual Aarti lamp you guide around the deity with your own finger or mouse.","features":["Everything in Digital Darshan + Aarti","Guide a virtual Aarti lamp with touch or mouse","Flame and bells respond to your movement","Tap-to-offer alternative for accessibility","Completion moment when your circles are done"],"capabilities":{"darshan":true,"sankalp":true,"watchAarti":true,"interactiveAarti":true},"badge":"Interactive"}]}],[["$","script","script-0",{"src":"/Devadwar/_next/static/chunks/0d7wq2cixie4l.js","async":true}],["$","script","script-1",{"src":"/Devadwar/_next/static/chunks/0gi6e32g09z8z.js","async":true}],["$","script","script-2",{"src":"/Devadwar/_next/static/chunks/1r9uxvfvvtpyn.js","async":true}]],["$","$L10",null,{"children":["$","$11",null,{"name":"Next.MetadataOutlet","children":"$@12"}]}]]}],"p":"$@13","v":null,"s":"$8"}}]]
+9:[["children",{"s":{"n":"slug","t":"d","k":"lakshmi","s":[]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","template":["$","$L5",null,{}]}]]}],"p":"$@a","v":"$7","s":"$8"},"c":"$Qb"}]]
+1:[["children",{"s":"deities","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","template":["$","$L5",null,{}]}]]}],"p":"$@6","v":"$7","s":"$8"},"c":"$Q9"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L15",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1, viewport-fit=cover"}],["$","meta","2",{"name":"theme-color","content":"#05071a"}]]}],["$","$L17",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$11",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Goddess Lakshmi · Devadwar"}],["$","meta","1",{"name":"description","content":"Goddess of grace, prosperity and auspiciousness, seated upon the lotus."}],["$","meta","2",{"name":"application-name","content":"Devadwar"}],["$","meta","3",{"name":"robots","content":"index, follow"}],["$","meta","4",{"property":"og:title","content":"Devadwar"}],["$","meta","5",{"property":"og:description","content":"A gateway to quiet devotion"}],["$","meta","6",{"property":"og:type","content":"website"}],["$","meta","7",{"name":"twitter:card","content":"summary"}],["$","meta","8",{"name":"twitter:title","content":"Devadwar"}],["$","meta","9",{"name":"twitter:description","content":"A gateway to quiet devotion"}],["$","link","10",{"rel":"icon","href":"/Devadwar/icon.svg?icon.0dd8o1f2h_ocr.svg","sizes":"any","type":"image/svg+xml"}],["$","$L18","11",{}]]}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":"$@19","v":null,"s":"$8"}},"a":"$@1a","u":"$@1b","b":"FUsIpfUws6w4PtwVIGpsk"}
+12:null
+1b:true
+8:300
+8:C
+1a:0
+a:"$undefined"
+6:"$undefined"
+19:"$undefined"
+13:"$undefined"

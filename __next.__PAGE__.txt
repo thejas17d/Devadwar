@@ -1,0 +1,21 @@
+2:"$Sreact.fragment"
+3:"/Devadwar/_next/static/chunks/2daah0oetb1x-.js"
+4:"/Devadwar/_next/static/chunks/25k51ev6o9jrn.js"
+5:I[54523,["$3","$4"],"HomeClient"]
+6:I[97367,["$3"],"OutletBoundary"]
+7:"$Sreact.suspense"
+b:"ViewportBoundary"
+c:I[97367,["$3"],"$b"]
+d:"MetadataBoundary"
+e:I[97367,["$3"],"$d"]
+f:I[27201,["$3"],"IconMark"]
+a:X
+1:[["children",{"s":"__PAGE__","h":128,"d":{"r":["$","$2","c",{"children":[["$","$L5",null,{}],[["$","script","script-0",{"src":"/Devadwar/_next/static/chunks/25k51ev6o9jrn.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"p":"$@9","v":null,"s":"$a"}}]]
+0:{"t":{"t":{"s":"","h":16,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$Lc",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1, viewport-fit=cover"}],["$","meta","2",{"name":"theme-color","content":"#05071a"}]]}],["$","$Le",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$7",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Devadwar — Gateway of the Divine"}],["$","meta","1",{"name":"description","content":"Step through the celestial gate into a sanctuary of light, music and prayer. Choose your deity, offer your Sankalp, and spend a peaceful moment in devotion — for as long as you wish. An independent digital devotional experience. Not affiliated with any temple or religious trust."}],["$","meta","2",{"name":"application-name","content":"Devadwar"}],["$","meta","3",{"name":"robots","content":"index, follow"}],["$","meta","4",{"property":"og:title","content":"Devadwar"}],["$","meta","5",{"property":"og:description","content":"A gateway to quiet devotion"}],["$","meta","6",{"property":"og:type","content":"website"}],["$","meta","7",{"name":"twitter:card","content":"summary"}],["$","meta","8",{"name":"twitter:title","content":"Devadwar"}],["$","meta","9",{"name":"twitter:description","content":"A gateway to quiet devotion"}],["$","link","10",{"rel":"icon","href":"/Devadwar/icon.svg?icon.0dd8o1f2h_ocr.svg","sizes":"any","type":"image/svg+xml"}],["$","$Lf","11",{}]]}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":"$@10","v":null,"s":"$a"}},"a":"$@11","u":"$@12","b":"FUsIpfUws6w4PtwVIGpsk"}
+8:null
+12:true
+a:300
+a:C
+11:0
+10:"$undefined"
+9:"$undefined"

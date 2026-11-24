@@ -1,0 +1,27 @@
+2:"$Sreact.fragment"
+3:"/Devadwar/_next/static/chunks/2daah0oetb1x-.js"
+4:I[39756,["$3"],"default"]
+5:I[37457,["$3"],"default"]
+a:"/Devadwar/_next/static/chunks/3zt_16xndew4w.js"
+b:I[22016,["$3","$a"],""]
+c:I[97367,["$3"],"OutletBoundary"]
+d:"$Sreact.suspense"
+10:"ViewportBoundary"
+11:I[97367,["$3"],"$10"]
+12:"MetadataBoundary"
+13:I[97367,["$3"],"$12"]
+14:I[27201,["$3"],"IconMark"]
+7:X
+7:C
+8:X
+9:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","main",null,{"id":"main","className":"grid min-h-dvh place-items-center bg-[radial-gradient(120%_60%_at_50%_0%,#1a1f4d_0%,#05071a_60%)] px-4 text-center","children":["$","div",null,{"className":"ornate max-w-md px-6 py-8","children":[["$","div",null,{"className":"flex justify-center","children":["$","div",null,{"className":"relative flex flex-col items-center","style":{"width":48},"aria-hidden":"true","children":[["$","div",null,{"className":"flame ","style":{"--fw":"12.48px"},"aria-hidden":"true","children":[["$","span",null,{"className":"flame-glow","style":{"animationDelay":"0s"}}],["$","span",null,{"className":"flame-body","style":{"animationDelay":"0s"}}],["$","span",null,{"className":"flame-core","style":{"animationDelay":"0s"}}]]}],["$","svg",null,{"viewBox":"0 0 60 26","width":48,"style":{"marginTop":-1.92},"children":[["$","defs",null,{"children":["$","linearGradient",null,{"id":"diya-brass","x1":"0","y1":"0","x2":"0","y2":"1","children":[["$","stop",null,{"offset":"0","stopColor":"#fbe3a0"}],["$","stop",null,{"offset":"0.45","stopColor":"#d29b3c"}],["$","stop",null,{"offset":"1","stopColor":"#6e4812"}]]}]}],["$","path",null,{"d":"M2 6 Q30 2 58 6 Q54 22 30 24 Q6 22 2 6Z","fill":"url(#diya-brass)","stroke":"#5a3a0c","strokeWidth":"0.8"}],["$","ellipse",null,{"cx":"30","cy":"6","rx":"27","ry":"3.2","fill":"#3a2208","opacity":"0.85"}],["$","ellipse",null,{"cx":"30","cy":"6","rx":"22","ry":"2","fill":"#c98a2a","opacity":"0.5"}],["$","path",null,{"d":"M8 12 Q30 16 52 12","stroke":"#fff1c2","strokeOpacity":"0.45","strokeWidth":"0.8","fill":"none"}]]}]]}]}],["$","h1",null,{"className":"mt-2 font-display text-3xl text-gold-light","children":"This path leads nowhere"}],["$","p",null,{"className":"mt-3 text-ivory/75","children":"The page you were looking for isn't here. Let us guide you back."}],["$","div",null,{"className":"mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center","children":[["$","$Lb",null,{"href":"/deities","className":"btn-gold","children":"Divine Gallery"}],["$","$Lb",null,{"href":"/","className":"btn-ghost","children":"Home"}]]}]]}]}],[["$","script","script-0",{"src":"/Devadwar/_next/static/chunks/3zt_16xndew4w.js","async":true}]],["$","$Lc",null,{"children":["$","$d",null,{"name":"Next.MetadataOutlet","children":"$@e"}]}]]}],"p":"$@f","v":null,"s":"$8"}}]]
+1:[["children",{"s":"/_not-found","h":64,"d":{"r":["$","$2","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","template":["$","$L5",null,{}]}]]}],"p":"$@6","v":"$7","s":"$8"},"c":"$Q9"}]]
+0:{"t":{"t":{"s":"","h":16,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L11",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1, viewport-fit=cover"}],["$","meta","2",{"name":"theme-color","content":"#05071a"}]]}],["$","$L13",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$d",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Devadwar — Gateway of the Divine"}],["$","meta","1",{"name":"description","content":"Step through the celestial gate into a sanctuary of light, music and prayer. Choose your deity, offer your Sankalp, and spend a peaceful moment in devotion — for as long as you wish. An independent digital devotional experience. Not affiliated with any temple or religious trust."}],["$","meta","2",{"name":"application-name","content":"Devadwar"}],["$","meta","3",{"name":"robots","content":"index, follow"}],["$","meta","4",{"property":"og:title","content":"Devadwar"}],["$","meta","5",{"property":"og:description","content":"A gateway to quiet devotion"}],["$","meta","6",{"property":"og:type","content":"website"}],["$","meta","7",{"name":"twitter:card","content":"summary"}],["$","meta","8",{"name":"twitter:title","content":"Devadwar"}],["$","meta","9",{"name":"twitter:description","content":"A gateway to quiet devotion"}],["$","link","10",{"rel":"icon","href":"/Devadwar/icon.svg?icon.0dd8o1f2h_ocr.svg","sizes":"any","type":"image/svg+xml"}],["$","$L14","11",{}]]}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":"$@15","v":null,"s":"$8"}},"a":"$@16","u":"$@17","b":"FUsIpfUws6w4PtwVIGpsk"}
+e:null
+17:true
+8:300
+8:C
+16:0
+6:"$undefined"
+15:"$undefined"
+f:"$undefined"
