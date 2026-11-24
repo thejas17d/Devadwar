@@ -1,0 +1,14 @@
+import { chromium, devices } from "@playwright/test";
+const url = process.argv[2];
+const b = await chromium.launch({ channel: "chrome" });
+const p = await b.newPage(devices["Pixel 7"]);
+const errs = [];
+p.on("console", (m) => m.type() === "error" && errs.push(m.text().slice(0, 150)));
+p.on("pageerror", (e) => errs.push(e.message));
+await p.goto(url);
+await p.getByTestId("enter").click();
+await p.waitForURL(/deities/, { timeout: 20000, waitUntil: "commit" });
+await p.getByRole("link", { name: /Lord Ganesha/ }).click();
+await p.getByTestId("pkg-digitalAarti").click();
+console.log("hydrated + navigated OK via", url, "| errors:", errs.length ? errs : "none");
+await b.close();

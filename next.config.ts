@@ -20,6 +20,8 @@ const csp = [
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  // Dev only: let phones on the local network (e.g. 192.168.x.x) load dev assets for on-device testing.
+  allowedDevOrigins: ["192.168.*.*", "10.*.*.*"],
   poweredByHeader: false,
   images: { formats: ["image/avif", "image/webp"] },
   async headers() {
