@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
-import { getDeity } from "@/lib/content";
+import { Suspense } from "react";
+import { getAllDeities } from "@/lib/content";
 import { CompleteClient } from "./CompleteClient";
 
 export const metadata: Metadata = { title: "With gratitude", robots: { index: false } };
 
-export default async function CompletePage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
-  const sp = await searchParams;
-  const deity = typeof sp.deity === "string" ? getDeity(sp.deity) : null;
-  return <CompleteClient deity={deity} />;
+export default function CompletePage() {
+  return (
+    <Suspense fallback={<main id="main" className="min-h-dvh" aria-busy="true" />}>
+      <CompleteClient deities={getAllDeities()} />
+    </Suspense>
+  );
 }

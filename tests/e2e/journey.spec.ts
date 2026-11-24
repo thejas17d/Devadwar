@@ -1,5 +1,9 @@
 import { expect, test, type Page } from "@playwright/test";
 
+/** Static (GitHub Pages) runs: E2E_STATIC=1, pages live under E2E_BASE_PATH (e.g. /Devadwar). */
+const STATIC = process.env.E2E_STATIC === "1";
+const BP = process.env.E2E_BASE_PATH ?? "";
+
 const SENTINEL = "SANKALP-SECRET-7f3a peace for my family";
 
 /** Count AudioContext constructions to prove nothing autoplays. */
@@ -25,7 +29,7 @@ async function noHorizontalScroll(page: Page) {
 }
 
 async function buy(page: Page, deity: string, pkg: string, sankalp: boolean) {
-  await page.goto(`/deities/${deity}`);
+  await page.goto(BP + `/deities/${deity}`);
   await page.getByTestId(`pkg-${pkg}`).click();
   await page.getByTestId("continue").click();
   await expect(page).toHaveURL(/\/checkout/, { timeout: 20_000 });
@@ -35,14 +39,14 @@ async function buy(page: Page, deity: string, pkg: string, sankalp: boolean) {
   await page.getByTestId("ack").check();
   await page.getByTestId("pay").click();
   await page.getByTestId("confirm-demo").click();
-  await expect(page).toHaveURL(/\/experience$/, { timeout: 20_000 });
+  await expect(page).toHaveURL(/\/experience\/?$/, { timeout: 20_000 });
   await page.getByTestId("open-curtain").click();
 }
 
 test.describe("gateway & gallery", () => {
   test("no audio before interaction; Enter opens the gallery", async ({ page }) => {
     await instrumentAudio(page);
-    await page.goto("/");
+    await page.goto(BP + "/");
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
     await page.waitForTimeout(800);
     expect(await page.evaluate(() => (window as any).__audioCtxCount)).toBe(0);
@@ -55,7 +59,7 @@ test.describe("gateway & gallery", () => {
 
   test("entering in silence never creates an audio context", async ({ page }) => {
     await instrumentAudio(page);
-    await page.goto("/");
+    await page.goto(BP + "/");
     await page.getByRole("switch").click();
     await page.getByTestId("enter").click();
     await expect(page).toHaveURL(/\/deities/, { timeout: 20_000 });
@@ -63,7 +67,7 @@ test.describe("gateway & gallery", () => {
   });
 
   test("deity page shows configured prices and switches deity", async ({ page }) => {
-    await page.goto("/deities");
+    await page.goto(BP + "/deities");
     await page.getByRole("link", { name: /Lord Krishna/ }).click();
     await expect(page.getByRole("heading", { name: "Lord Krishna", exact: true })).toBeVisible();
     for (const [id, price] of [
@@ -81,19 +85,19 @@ test.describe("gateway & gallery", () => {
   });
 
   test("broken routes are handled", async ({ page }) => {
-    const r = await page.goto("/deities/not-a-deity");
+    const r = await page.goto(BP + "/deities/not-a-deity");
     expect(r?.status()).toBe(404);
     await expect(page.getByText("This path leads nowhere")).toBeVisible();
-    await page.goto("/checkout?deity=shiva&package=gold");
+    await page.goto(BP + "/checkout?deity=shiva&package=gold");
     await expect(page.getByText("Let us begin again")).toBeVisible();
-    await page.goto("/experience");
+    await page.goto(BP + "/experience");
     await expect(page.getByText("No active experience")).toBeVisible();
   });
 });
 
 test.describe("checkout", () => {
   test("acknowledgement is required and unticked by default", async ({ page }) => {
-    await page.goto("/checkout?deity=ganesha&package=digitalAarti");
+    await page.goto(BP + "/checkout?deity=ganesha&package=digitalAarti");
     await expect(page.getByTestId("ack")).not.toBeChecked();
     await expect(page.getByTestId("pay")).toBeDisabled();
     await expect(page.getByTestId("total")).toHaveText("₹20");
@@ -101,6 +105,7 @@ test.describe("checkout", () => {
   });
 
   test("server refuses tampered or unknown orders; webhook is disabled", async ({ request }) => {
+    test.skip(STATIC, "No server API on static hosting (demo payment runs in the browser).");
     expect((await request.post("/api/orders", { data: { deity: "nobody", packageId: "digitalDarshan" } })).status()).toBe(404);
     expect((await request.post("/api/orders", { data: { deity: "shiva", packageId: "platinum" } })).status()).toBe(404);
     const ok = await request.post("/api/orders", { data: { deity: "shiva", packageId: "interactiveAarti", amountPaise: 1 } });
@@ -125,7 +130,7 @@ test.describe("devotional experiences", () => {
     await expect(page.getByText("ॐ नमः शिवाय")).toBeVisible();
     // no auto-exit: still here after a while
     await page.waitForTimeout(4000);
-    await expect(page).toHaveURL(/\/experience$/);
+    await expect(page).toHaveURL(/\/experience\/?$/);
     await page.getByTestId("conclude").click();
     await expect(page).toHaveURL(/\/complete/, { timeout: 20_000 });
     await expect(page.getByTestId("closing-message")).toBeVisible();
@@ -205,14 +210,14 @@ test.describe("devotional experiences", () => {
 test.describe("legal pages", () => {
   for (const path of ["/terms", "/privacy", "/refunds", "/disclaimer", "/grievance", "/contact"]) {
     test(`${path} is marked as a draft for lawyer review`, async ({ page }) => {
-      await page.goto(path);
+      await page.goto(BP + path);
       await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
       await expect(page.getByRole("note")).toContainText("Indian lawyer");
       await noHorizontalScroll(page);
     });
   }
   test("/about renders", async ({ page }) => {
-    await page.goto("/about");
+    await page.goto(BP + "/about");
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
   });
 });

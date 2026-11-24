@@ -4,8 +4,9 @@ import { getAllDeities, getDeity } from "@/lib/content";
 import { listPackages } from "@/config/packages";
 import { DeityClient } from "./DeityClient";
 
-// New deity JSON files are picked up without code changes; unknown slugs 404.
-export const dynamicParams = true;
+// Every deity page is pre-rendered from the JSON files at build time (works on
+// static hosting too). Adding a deity = add a JSON file + rebuild. Unknown slugs 404.
+export const dynamicParams = false;
 
 export function generateStaticParams() {
   return getAllDeities().map((d) => ({ slug: d.slug }));

@@ -5,7 +5,8 @@ import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import type { Deity } from "@/lib/types";
 import { formatINR, type DevotionalPackage } from "@/config/packages";
-import type { SignedOrder, Receipt } from "@/lib/payments/types";
+import type { SignedOrder } from "@/lib/payments/types";
+import { confirmDemoPayment, createOrder } from "@/lib/payments/client";
 import { saveSession } from "@/lib/payments/session";
 import { DeityBackdrop } from "@/components/deity/DeityBackdrop";
 import { DeityArt } from "@/components/deity/DeityArt";
@@ -34,14 +35,8 @@ export function CheckoutClient({ deity, pkg }: { deity: Deity; pkg: DevotionalPa
     setError(null);
     setStage("creating");
     try {
-      const res = await fetch("/api/orders", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ deity: deity.slug, packageId: pkg.id }),
-      });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data?.error || "Could not create the order.");
-      setSigned(data as SignedOrder);
+      const data = await createOrder(deity.slug, pkg.id);
+      setSigned(data);
       setStage("sheet");
     } catch (e) {
       setError(e instanceof Error ? e.message : "Something went wrong.");
@@ -53,14 +48,7 @@ export function CheckoutClient({ deity, pkg }: { deity: Deity; pkg: DevotionalPa
     if (!signed) return;
     setStage("confirming");
     try {
-      const res = await fetch("/api/payments/demo/confirm", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(signed),
-      });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data?.error || "Could not confirm the demo payment.");
-      const receipt = data.receipt as Receipt;
+      const receipt = await confirmDemoPayment(signed);
       if (!saveSession({ receipt, wantsSankalp })) throw new Error("Your browser blocked session storage. Please allow it and try again.");
       sfx("bell", { vel: 0.5 });
       router.push("/experience");

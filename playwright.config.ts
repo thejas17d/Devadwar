@@ -1,6 +1,8 @@
 import { defineConfig, devices } from "@playwright/test";
 
 const PORT = Number(process.env.E2E_PORT || 3200);
+// E2E_STATIC=1 tests the GitHub Pages build (./out) through scripts/serve-pages.mjs.
+const STATIC = process.env.E2E_STATIC === "1";
 
 export default defineConfig({
   testDir: "tests/e2e",
@@ -14,7 +16,7 @@ export default defineConfig({
   use: { baseURL: `http://localhost:${PORT}`, trace: "retain-on-failure" },
   webServer: {
     // Tests run against a production build: `npm run build` first.
-    command: `npx next start -p ${PORT}`,
+    command: STATIC ? `node scripts/serve-pages.mjs` : `npx next start -p ${PORT}`,
     port: PORT,
     reuseExistingServer: true,
     timeout: 120_000,

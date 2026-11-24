@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import type { Deity } from "@/lib/types";
 import { closingMessages } from "@/config/brand";
 import { DeityBackdrop } from "@/components/deity/DeityBackdrop";
@@ -12,7 +13,9 @@ import { useSoundscape } from "@/components/audio/AudioProvider";
 
 const FALLBACK_THEME = { skyTop: "#0b0a24", skyBottom: "#3a2a5a", glow: "#ffd98a", accent: "#f3d98b", motif: "hills" as const };
 
-export function CompleteClient({ deity }: { deity: Deity | null }) {
+export function CompleteClient({ deities }: { deities: Deity[] }) {
+  const slug = useSearchParams().get("deity");
+  const deity = deities.find((d) => d.slug === slug) ?? null;
   useSoundscape(deity?.slug ?? null, deity ? "ambient" : "gallery");
   const [message, setMessage] = useState<string>(closingMessages[0]);
   useEffect(() => {

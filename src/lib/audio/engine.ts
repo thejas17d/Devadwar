@@ -11,6 +11,7 @@
 import type { Track } from "../types";
 import { Composition } from "./composer";
 import * as I from "./instruments";
+import { assetPath } from "../env";
 
 export type SfxName = "bell" | "ghanti" | "chime" | "gong" | "shankha" | "manjira";
 
@@ -159,7 +160,7 @@ export class AudioEngine {
       comp.start(t + 0.05);
       playing.comp = comp;
     } else {
-      const el = new Audio(track.source.src);
+      const el = new Audio(assetPath(track.source.src));
       el.loop = true;
       el.crossOrigin = "anonymous";
       const node = ctx.createMediaElementSource(el);

@@ -9,8 +9,18 @@ import { SiteFooter } from "@/components/layout/SiteFooter";
 import { AudioControls } from "@/components/audio/AudioControls";
 import { useAudio, useSoundscape } from "@/components/audio/AudioProvider";
 import Image from "next/image";
+import { Suspense } from "react";
+import { useSearchParams } from "next/navigation";
+import { assetPath } from "@/lib/env";
 
-export function GalleryClient({ deities, arrived = false }: { deities: Deity[]; arrived?: boolean }) {
+/** Gold bloom that continues the gateway transition — only when arriving through the gate. */
+function ArrivalBloom() {
+  const arrived = useSearchParams().get("via") === "gate";
+  if (!arrived) return null;
+  return <div className="pointer-events-none fixed inset-0 z-50 animate-[fade-in_1.4s_ease_reverse_both] bg-[radial-gradient(circle,#fffdf2,#ffe2a0_60%,#f0b36a)]" aria-hidden="true" />;
+}
+
+export function GalleryClient({ deities }: { deities: Deity[] }) {
   useSoundscape(null, "gallery");
   const { sfx } = useAudio();
 
@@ -23,7 +33,9 @@ export function GalleryClient({ deities, arrived = false }: { deities: Deity[]; 
         <ParticleField stars={40} motes={30} />
       </div>
       {/* arrival bloom continuing from the gateway */}
-      {arrived && <div className="pointer-events-none fixed inset-0 z-50 animate-[fade-in_1.4s_ease_reverse_both] bg-[radial-gradient(circle,#fffdf2,#ffe2a0_60%,#f0b36a)]" aria-hidden="true" />}
+      <Suspense fallback={null}>
+        <ArrivalBloom />
+      </Suspense>
 
       <header className="mx-auto flex max-w-6xl items-center justify-between px-4 pt-5">
         <Link href="/" className="font-display text-lg uppercase tracking-[0.24em] text-gold-light">
@@ -60,7 +72,7 @@ export function GalleryClient({ deities, arrived = false }: { deities: Deity[]; 
               >
                 <div className="niche-emblem relative mt-4 aspect-[200/240] w-[78%]">
                   {d.art.image ? (
-                    <Image src={d.art.image} alt="" fill sizes="200px" className="object-contain" />
+                    <Image src={assetPath(d.art.image)} alt="" fill sizes="200px" className="object-contain" />
                   ) : (
                     <Emblem id={d.art.emblem} label="" className="h-full w-full" />
                   )}

@@ -6,6 +6,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import type { Deity, TrackRole } from "@/lib/types";
 import { getPackage, type DevotionalPackage } from "@/config/packages";
 import { clearSession, loadSession, type ExperienceSession } from "@/lib/payments/session";
+import { verifyReceipt } from "@/lib/payments/client";
 import { DeityBackdrop } from "@/components/deity/DeityBackdrop";
 import { Shrine } from "@/components/deity/Shrine";
 import { AudioControls } from "@/components/audio/AudioControls";
@@ -46,15 +47,10 @@ export function ExperienceClient({ deities }: { deities: Deity[] }) {
       return;
     }
     let cancelled = false;
-    fetch("/api/receipts/verify", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ receipt: s.receipt }),
-    })
-      .then((r) => r.json())
-      .then((v) => {
+    verifyReceipt(s.receipt)
+      .then((valid) => {
         if (cancelled) return;
-        if (!v?.valid) return setPhase("invalid");
+        if (!valid) return setPhase("invalid");
         setSession(s);
         setDeity(d);
         setPkg(p);
